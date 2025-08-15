@@ -146,7 +146,13 @@
         alert('Please enter a valid phone number');
       }
     });
-
+    
+    // Close callout box
+    const closeCallout = document.getElementById('closeCallout');
+    closeCallout.addEventListener('click', () => {
+      document.querySelector('.fixed.top-1\\/2').classList.add('hidden');
+    });
+    
     callbackModal.addEventListener('click', (e) => {
       if (e.target === callbackModal) {
         callbackModal.style.display = 'none';
